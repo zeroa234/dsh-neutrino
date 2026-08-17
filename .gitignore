@@ -1,0 +1,4 @@
+node_modules/
+*.tsbuildinfo
+*.tgz
+templates/user-settings.json

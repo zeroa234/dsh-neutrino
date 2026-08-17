@@ -1,0 +1,4 @@
+# dsh-neutrino bundle patch: inserts the STUDIO NEUTRINO singing-synthesis tool plugin into the profile roster.
+- insert:
+    - id: dsh-neutrino
+      name: '@dsh-external/dsh-neutrino'

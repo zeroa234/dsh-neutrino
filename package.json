@@ -1,0 +1,60 @@
+{
+  "name": "@dsh-external/dsh-neutrino",
+  "version": "0.1.0",
+  "description": "让 AI 助手驱动 STUDIO NEUTRINO（免费日语 AI 歌声合成引擎）唱歌：给歌词和旋律，自动生成角色演唱的 WAV。需自备免费的 NEUTRINO 引擎和声库，插件内置官方下载引导。",
+  "type": "module",
+  "main": "./lib/index.js",
+  "types": "./lib/types/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zeroa234/dsh-neutrino.git"
+  },
+  "homepage": "https://github.com/zeroa234/dsh-neutrino",
+  "bugs": {
+    "url": "https://github.com/zeroa234/dsh-neutrino/issues"
+  },
+  "exports": {
+    ".": {
+      "types": "./lib/types/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "license": "BSD-3-Clause",
+  "peerDependencies": {
+    "@deepseek-ai/cordis": ">=4.0.0-rc <5",
+    "@deepseek-ai/dsh-tools": ">=0.0.1-rc <2",
+    "@deepseek-ai/schemastery": "^3.18.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.13.3",
+    "typescript": "^5.9.0"
+  },
+  "scripts": {
+    "build": "bash scripts/build.sh",
+    "test": "node --test \"tests/*.test.js\"",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "agent-tools",
+    "ai-agents",
+    "neutrino",
+    "voice-synthesis",
+    "singing",
+    "singing-voice-synthesis",
+    "japanese",
+    "musicxml",
+    "vocaloid"
+  ]
+}
